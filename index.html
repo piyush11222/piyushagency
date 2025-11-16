@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Piyush Agency - Live Streaming Talent Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#0b3b6f;--accent:#1a73e8;--muted:#6b7280;--bg:#f5f7fb}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#111}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+header{background:#fff;padding:18px 0;box-shadow:0 6px 18px rgba(10,10,10,0.06);position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:28px}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:#111;text-decoration:none;font-weight:600}
+.cta{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+.hero{background:linear-gradient(180deg,var(--primary),#063055);color:#fff;padding:90px 0;text-align:center}
+.hero h1{font-size:48px;margin:0 0 12px}
+.hero p{font-size:20px;margin:0 0 18px;opacity:0.95}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.card{background:#fff;padding:22px;border-radius:14px;box-shadow:0 8px 30px rgba(15,23,42,0.06)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.section{padding:72px 0}
+.section h2{text-align:center;font-size:34px;margin:0 0 14px}
+.small{color:var(--muted);text-align:center;margin-bottom:18px}
+.features{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.feature{background:#fff;padding:18px;border-radius:12px;min-width:220px;text-align:left;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
+.feature h3{margin:0 0 8px}
+.footer{background:#062535;color:#e6f0fb;padding:36px 0;margin-top:40px}
+.footer .foot-inner{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.socials a{display:inline-block;margin-right:12px;color:#fff;text-decoration:none;font-weight:700}
+.btn-primary{background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;display:inline-block}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:15px}
+textarea{min-height:110px}
+.form-card{max-width:720px;margin:18px auto 0}
+.whatsapp{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:14px;border-radius:999px;box-shadow:0 8px 24px rgba(37,211,102,0.28);display:flex;gap:10px;align-items:center;text-decoration:none;font-weight:700}
+.app-grid{display:flex;gap:12px;justify-content:center}
+.app-btn{background:#fff;padding:10px 12px;border-radius:12px;display:flex;gap:10px;align-items:center;box-shadow:0 6px 18px rgba(10,10,10,0.06);text-decoration:none;color:#111}
+.app-badge{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+@media(max-width:880px){.grid{grid-template-columns:1fr}.hero h1{font-size:34px}.header-inner{padding:0 10px}.nav{display:none}.form-grid{grid-template-columns:1fr}}
+.fade-up{transform:translateY(8px);opacity:0;animation:fadeUp .6s forwards}
+@keyframes fadeUp{to{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="logo">P</div>
+      <div>
+        <div style="font-weight:700">Piyush Agency</div>
+        <div style="font-size:13px;color:var(--muted)">Live Streaming Talent Agency</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:18px">
+      <div style="text-align:right;font-weight:700">+91 63789 39753<br/><span style="font-weight:600;color:var(--muted);font-size:13px">support@piyushagency.com</span></div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a class="cta" href="#apply">Apply Now</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <h1 class="fade-up">Piyush Agency</h1>
+    <p class="fade-up" style="animation-delay:0.08s">Connecting Talent with Top Streaming Opportunities</p>
+    <div style="margin-top:22px">
+      <a class="btn-primary" href="#apply">Join Us</a>
+      <a class="btn-primary" href="#services" style="background:#134e76;margin-left:12px">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section container" id="services">
+  <h2>Our Services</h2>
+  <p class="small">We help streamers grow — from discovery to professional management.</p>
+  <div class="cards">
+    <div class="card fade-up">
+      <h3>Hiring Talent</h3>
+      <p>We discover and nurture passionate streamers with a focus on long-term growth and monetization.</p>
+    </div>
+    <div class="card fade-up" style="animation-delay:0.06s">
+      <h3>Recruit Agents</h3>
+      <p>We recruit and train dedicated agents to manage and support streaming talent.</p>
+    </div>
+    <div class="card fade-up" style="animation-delay:0.12s">
+      <h3>Manage Talent</h3>
+      <p>Full-service talent management: branding, strategy, monetization and career planning.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px;background:transparent" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h2>About Piyush Agency</h2>
+          <p style="color:var(--muted)">Piyush Agency is a trusted live-streaming talent agency. We connect talents with top streaming platforms and provide end-to-end support — training, growth strategy, and management.</p>
+          <div style="margin-top:12px">
+            <strong>Why choose us?</strong>
+            <ul style="margin-top:8px;color:var(--muted)">
+              <li>Experienced agents &amp; hosts network</li>
+              <li>Personalized growth plans</li>
+              <li>Transparent earnings &amp; clear contracts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card form-card" id="apply">
+          <h3 style="margin-top:0">Apply / Register</h3>
+          <p style="color:var(--muted);margin-top:0">Fill this form and our agent will contact you within 24-48 hours.</p>
+          <form id="applyForm">
+            <div class="form-grid">
+              <input class="input" type="text" name="name" placeholder="Full name" required />
+              <input class="input" type="tel" name="phone" placeholder="Phone (+91...)" value="+91 6378939753" required />
+            </div>
+            <div style="margin-top:12px" class="form-grid">
+              <input class="input" type="email" name="email" placeholder="Email (you@site.com)" required />
+              <select class="input" name="role">
+                <option value="host">Become a Host / Streamer</option>
+                <option value="agent">Become an Agent</option>
+                <option value="other">Other / Collaboration</option>
+              </select>
+            </div>
+            <div style="margin-top:12px">
+              <textarea name="message" placeholder="Brief about you (optional)"></textarea>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+              <button class="btn-primary" type="submit">Submit Application</button>
+              <a href="mailto:support@piyushagency.com" class="app-btn" style="padding:8px 10px">Or email us</a>
+            </div>
+            <p id="formMsg" style="color:green;display:none;margin-top:10px">Thank you! We'll contact you soon.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <h2>Download Our Apps</h2>
+  <p class="small">Use our recommended apps to start streaming and monetizing faster.</p>
+  <div class="app-grid" style="margin-top:18px">
+    <a class="app-btn" href="#" aria-label="Download on Play Store">
+      <div class="app-badge">G</div>
+      <div>
+        <div style="font-weight:700">Google Play</div>
+        <div style="font-size:13px;color:var(--muted)">Streaming tools</div>
+      </div>
+    </a>
+    <a class="app-btn" href="#" aria-label="Download on App Store">
+      <div class="app-badge">A</div>
+      <div>
+        <div style="font-weight:700">App Store</div>
+        <div style="font-size:13px;color:var(--muted)">iOS tools</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container foot-inner">
+    <div style="flex:1">
+      <div style="font-weight:700;font-size:18px">Piyush Agency</div>
+      <div style="color:var(--muted);margin-top:6px">Connecting talent with top streaming opportunities.</div>
+    </div>
+    <div style="width:300px">
+      <div style="font-weight:700">Contact</div>
+      <div style="margin-top:6px;color:var(--muted)">Phone: +91 63789 39753</div>
+      <div style="margin-top:6px;color:var(--muted)">Email: support@piyushagency.com</div>
+      <div style="margin-top:12px">
+        <div class="socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:18px;color:#bfe6ff">© 2025 Piyush Agency. All rights reserved.</div>
+</footer>
+
+<a class="whatsapp" href="https://api.whatsapp.com/send?phone=+9163789339753&text=Hi%20Piyush%20Agency%20team%2C%20I%27m%20interested%20in%20joining" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+    <path d="M20.52 3.478A11.845 11.845 0 0012 .25C5.9.25.99 5.16.99 11.26c0 2.02.53 3.94 1.54 5.64L.25 23.75l6.99-1.83A11.97 11.97 0 0012 23.25c6.1 0 11.01-4.91 11.01-11.01 0-2.96-1.16-5.74-3.49-7.76z" fill="#fff"/>
+  </svg>
+  Chat with us
+</a>
+
+<script>
+// Simple form handler (client-side) — replace with server endpoint when available
+const form=document.getElementById('applyForm');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  const data=new FormData(form);
+  const name=data.get('name');
+  const phone=data.get('phone');
+  const email=data.get('email');
+  const role=data.get('role');
+  const message=data.get('message');
+  const subject=encodeURIComponent('New application from '+name+ ' ('+role+')');
+  const body=encodeURIComponent('Name: '+name+'\\nPhone: '+phone+'\\nEmail: '+email+'\\nRole: '+role+'\\nMessage: '+message);
+  // open mail client as fallback
+  window.location.href='mailto:support@piyushagency.com?subject='+subject+'&body='+body;
+  document.getElementById('formMsg').style.display='block';
+  form.reset();
+});
+</script>
+
+</body>
+</html>
