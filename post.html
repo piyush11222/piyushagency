@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Post — Piyush Agency</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <a href="/piyushagency/" style="text-decoration:none;">← Back</a>
+
+        <div id="postWrap" class="card" style="margin-top:14px"></div>
+    </div>
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAUoKa_d6aeheuKRTyRm_7cla1aJEbUUoQ",
+            authDomain: "piyush-agency.firebaseapp.com",
+            projectId: "piyush-agency",
+            storageBucket: "piyush-agency.firebasestorage.app",
+            messagingSenderId: "931552293046",
+            appId: "1:931552293046:web:94c6d622e3a9edad587617",
+            measurementId: "G-V2L4CVKDPZ"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const params = new URLSearchParams(location.search);
+        const id = params.get("id");
+
+        const wrap = document.getElementById("postWrap");
+
+        if (!id) {
+            wrap.innerHTML = `<div class="muted">No post selected.</div>`;
+        } else {
+
+            (async () => {
+
+                const snap = await getDoc(doc(db, "posts", id));
+
+                if (!snap.exists()) {
+                    wrap.innerHTML = `<div class="muted">Post not found.</div>`;
+                    return;
+                }
+
+                const p = snap.data();
+
+                wrap.innerHTML = `
+                    <img src="${p.imageUrl}" 
+                    style="width:100%;height:360px;object-fit:cover;border-radius:8px" />
+
+                    <div style="padding:12px">
+                        <h2>${p.title || ""}</h2>
+                        <p class="muted">${p.category || ""}</p>
+
+                        <p style="margin-top:10px">${p.desc || ""}</p>
+
+                        <a class="btn" href="${p.link || '#'}" target="_blank">Open Link</a>
+                    </div>
+                `;
+            })();
+        }
+
+    </script>
+
+</body>
+
+</html>
