@@ -1,45 +1,47 @@
-<!doctype html>
+/* ------------------------------- Piyush Agency - Mobile Only Styles Clean design similar to livehosting.xyz ---------------------------------- */
 
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Piyush Agency</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body><div class="mobile-wrap"><!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Piyush Agency</h1>
-        <p>Your Trusted Agency for Offers, Rewards & Professional Services</p>
-    </div>
-</section>
+/* GLOBAL ROOT COLORS */ :root { --bg: #f4f7fb; --card: #ffffff; --text: #0f172a; --muted: #6b7280; --accent: #0b74ff; }
 
-<!-- DASHBOARD BUTTONS (App-Style) -->
-<section class="dashboard">
-    <a class="dash-btn" href="#offers">Offers</a>
-    <a class="dash-btn" href="#rewards">Rewards</a>
-    <a class="dash-btn" href="#updates">Updates</a>
-    <a class="dash-btn" href="#contact">Contact</a>
-</section>
+body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: var(--text); }
 
-<!-- POSTS SECTIONS (DYNAMIC) -->
-<h2 id="offers">Latest Offers</h2>
-<div class="grid" id="offersGrid"></div>
+.mobile-wrap { max-width: 430px; margin: auto; background: var(--bg); }
 
-<h2 id="rewards">Rewards</h2>
-<div class="grid" id="rewardsGrid"></div>
+/* -------------------------------------- / / HERO SECTION LIKE LIVEHOSTING.XYZ      / / -------------------------------------- */ .hero { position: relative; height: 220px; background-image: url('https://res.cloudinary.com/dzbdoraot/image/upload/v1700000000/default_hero.jpg'); background-size: cover; background-position: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; overflow: hidden; }
 
-<h2 id="updates">Updates</h2>
-<div class="grid" id="updatesGrid"></div>
+.hero-overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); }
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> 6378939753</p>
-    <p><strong>Email:</strong> info@piyushagency.com</p>
-</section>
+.hero-content { position: absolute; bottom: 20px; left: 20px; right: 20px; color: white; }
 
-</div><script type="module" src="script.js"></script></body>
-</html>
+.hero-content h1 { margin: 0; font-size: 28px; font-weight: 800; }
+
+.hero-content p { margin: 4px 0 12px; font-size: 14px; opacity: 0.9; }
+
+.apply-btn { display: inline-block; padding: 10px 16px; background: #00b74a; color: white; font-weight: 600; border-radius: 8px; text-decoration: none; font-size: 14px; }
+
+/* -------------------------------------- / / DASHBOARD BUTTONS (APP STYLE)          / / -------------------------------------- */ .dashboard { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 16px; }
+
+.dash-btn { background: var(--card); text-align: center; padding: 14px; border-radius: 12px; text-decoration: none; color: var(--text); font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+
+/* -------------------------------------- / / SECTION HEADINGS                       / / -------------------------------------- */ h2 { padding: 12px 16px 4px; margin: 0; font-size: 20px; font-weight: 700; }
+
+/* -------------------------------------- / / JOB STYLE CARDS LIKE LIVEHOSTING.XYZ   / / -------------------------------------- */ .job-list { padding: 8px 16px 16px; display: flex; flex-direction: column; gap: 14px; }
+
+.job-card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.08); animation: fadeIn 0.25s ease; }
+
+.job-img { width: 100%; height: 180px; object-fit: cover; }
+
+.job-info { padding: 12px; }
+
+.job-info h3 { margin: 0 0 6px; font-size: 17px; font-weight: 700; }
+
+.job-info p { margin: 0 0 12px; font-size: 14px; color: var(--muted); }
+
+.job-btn { display: inline-block; padding: 10px 14px; background: var(--accent); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; }
+
+/* -------------------------------------- / / APPLY SECTION                           / / -------------------------------------- */ .apply-section { padding: 20px 16px; text-align: center; }
+
+.apply-section p { font-size: 14px; color: var(--muted); }
+
+/* -------------------------------------- / / CONTACT SECTION                         / / -------------------------------------- */ .contact { padding: 20px 16px; }
+
+/* FADE IN */ @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to   { opacity: 1; transform: translateY(0); } }
